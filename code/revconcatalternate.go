@@ -62,9 +62,9 @@ func RevConcatAlternate(slice1, slice2 []int) []int {
 		larger = slice2
 		largerLen = len2
 		smallerLen = len1
-	}else{
-		largerLen=len1
-		smallerLen=len2
+	} else {
+		largerLen = len1
+		smallerLen = len2
 	}
 
 	for i := largerLen - 1; i >= smallerLen; i-- {

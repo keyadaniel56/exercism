@@ -1,7 +1,5 @@
 package code
 
-
-
 // func SaveAndMiss(arg string, num int) string {
 //     if num <= 0 {
 //         return arg
@@ -17,17 +15,16 @@ package code
 //     return result
 // }
 
-
-func SaveAndMiss(arg string, num int)string{
-	if num<=0{
+func SaveAndMiss(arg string, num int) string {
+	if num <= 0 {
 		return arg
 	}
 
-	result:=""
-	for i:=0;i<len(arg);i++{
-		groupIndex:=i/num
-		if groupIndex%2==0{
-			result+=string(arg[i])
+	result := ""
+	for i := 0; i < len(arg); i++ {
+		groupIndex := i / num
+		if groupIndex%2 == 0 {
+			result += string(arg[i])
 		}
 	}
 	return result

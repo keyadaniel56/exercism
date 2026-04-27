@@ -41,36 +41,33 @@ import (
 	"strconv"
 )
 
-
-
-func Fprime(arrgs []string){
-	if len(arrgs)!=1{
+func Fprime(arrgs []string) {
+	if len(arrgs) != 1 {
 		return
 	}
-	n,err:=strconv.Atoi(arrgs[0])
-	if err!=nil || n<=1{
+	n, err := strconv.Atoi(arrgs[0])
+	if err != nil || n <= 1 {
 		return
 	}
 
-	factors:=[]int{}
+	factors := []int{}
 
-	for i:=2;i<=n;i++{
-		for n%i==0{
+	for i := 2; i <= n; i++ {
+		for n%i == 0 {
 			factors = append(factors, i)
-			n/=i
+			n /= i
 		}
 	}
 
-	if len(factors)==0{
+	if len(factors) == 0 {
 		return
 	}
 
-	for i,factor:=range factors{
-		if i>0{
+	for i, factor := range factors {
+		if i > 0 {
 			fmt.Print("*")
 		}
 		fmt.Print(factor)
 	}
 	fmt.Println()
 }
-

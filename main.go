@@ -2,9 +2,9 @@ package main
 
 import (
 	"checkin/code"
-	
+	"fmt"
 )
 
 func main() {
-	code.Rub()
+	fmt.Println(code.ToCamelCase("the-stealth-warrior"))
 }
