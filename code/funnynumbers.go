@@ -24,4 +24,3 @@ func DigPow(n, p int) int {
 
 	return -1
 }
-

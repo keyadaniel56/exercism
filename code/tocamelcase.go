@@ -1,5 +1,3 @@
-
-
 package code
 
 func ToCamelCase(str string) string {
@@ -8,7 +6,7 @@ func ToCamelCase(str string) string {
 	}
 
 	b := []rune(str)
-	result:=[]rune{}
+	result := []rune{}
 	for i := 0; i < len(b); i++ {
 		if b[i] == '_' || b[i] == '-' {
 			if i+1 < len(b) && b[i+1] >= 'a' && b[i+1] <= 'z' {

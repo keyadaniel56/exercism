@@ -1,10 +1,11 @@
 package main
 
 import (
-	"checkin/code"
+	"checkin/arrays"
 	"fmt"
 )
 
 func main() {
-	fmt.Println(code.ToCamelCase("the-stealth-warrior"))
+	arr := []int{1, 2, 0, 4, 3, 0, 5, 0}
+	fmt.Println(arrays.MoveAllZeroes(arr))
 }
