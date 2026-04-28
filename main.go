@@ -7,9 +7,8 @@ import (
 )
 
 func main() {
-	// Test MaxProfit function
-Input:= []int{1, 4, 45, 6, 10, 8}
-target:= 13
-
-fmt.Println(arrays.HasTripletSum(Input,target))
+	
+a:= []int{1, 2, 3, 2, 1}
+ b:=[]int {3, 2, 2, 3, 3, 2}
+fmt.Println(arrays.FindUnion(a,b))
 }
