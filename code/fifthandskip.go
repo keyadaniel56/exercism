@@ -43,39 +43,43 @@ package code
 //     return result + "\n"
 // }
 
-func FifthAndSkip(str string) string {
-	if len(str) == 0 {
+
+package main
+
+import "fmt"
+func FifthAndSkip(str string)string{
+	if len(str)==0{
 		return "\n"
 	}
 
-	noSpaces := ""
-	for i := 0; i < len(str); i++ {
-		if str[i] != ' ' {
-			noSpaces += string(str[i])
+	var runes []rune
+	for _,r:=range str{
+		if str[r]!=' '{
+			runes=append(runes,r)
 		}
 	}
 
-	// check if less than 5 characters
-	if len(noSpaces) < 5 {
-		return "Invalid Input\n"
+	if len(runes)<5{
+		return "Invalid\n"
 	}
 
-	result := ""
-	i := 0
+	var resultRunes []rune
+	i:=0
+	for i<len(runes){
+		end:=i+5
+		if end>len(runes){
+			end=len(runes)
+		}
+		resultRunes=append(resultRunes,runes[i:end]...)
 
-	for i < len(noSpaces) {
-		count := 0
-		for count < 5 && i < len(noSpaces) {
-			result += string(noSpaces[i])
-			i++
-			count++
+		if end-i==5 && end<len(runes){
+			resultRunes=append(resultRunes,' ')
 		}
-		if i < len(noSpaces) {
-			i++
-			if i < len(noSpaces) {
-				result += " "
-			}
-		}
+		i+=6
 	}
-	return result + "\n"
+	return string(resultRunes)
+}
+
+func main(){
+	fmt.Println(FifthAndSkip("HelloWorld"))
 }
